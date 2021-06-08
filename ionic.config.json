@@ -1,0 +1,7 @@
+{
+  "name": "zaliczenie",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

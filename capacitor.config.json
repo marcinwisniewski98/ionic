@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "zaliczenie",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
