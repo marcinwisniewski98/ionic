@@ -1,16 +1,17 @@
 <template>
     <base-layout :page-title="loadedTask ? loadedTask.title : 'Loading...'" page-default-back-link="/tasks">
         <h2 v-if="!loadedTask">Task not found.</h2>
-        <h2 v-else>Loaded</h2>
+        <task-overview v-else :task="loadedTask"></task-overview>
     </base-layout>
 </template>
 
 <script>
-import {
-
-    } from '@ionic/vue';
+import TaskOverview from '../components/tasks/TaskOverview.vue'
 
 export default {
+    components: {
+        TaskOverview
+    },
     data() {
         return {
             taskId: this.$route.params.id,

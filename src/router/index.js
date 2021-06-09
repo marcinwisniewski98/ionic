@@ -12,7 +12,7 @@ const routes = [
   },
   {
     path: '/tasks/:id',
-    component: () => import('../pages/TaskDetails.vue')
+    component: () => import('../pages/TaskDetailsPage.vue')
   }
 ]
 
