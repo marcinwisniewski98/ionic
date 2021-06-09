@@ -1,7 +1,8 @@
 <template>
     <ion-img :src="task.image" alt="task.title"></ion-img>
     <h2 class="ion-text-center">{{ task.title }}</h2>
-    <p class="ion-text-center">{{ task.description }}</p>
+    <h3 class="ion-text-center">{{ task.deadline }}</h3>
+    <p class="ion-padding">{{ task.description }}</p>
 </template>
 
 <script>

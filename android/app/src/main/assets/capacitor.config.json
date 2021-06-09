@@ -1,0 +1,6 @@
+{
+	"appId": "pl.edu.ug.tasks",
+	"appName": "Tasks",
+	"webDir": "public",
+	"bundledWebRuntime": false
+}

@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "zaliczenie",
-	"webDir": "dist",
-	"bundledWebRuntime": false
+  "appId": "pl.edu.ug.tasks",
+  "appName": "Tasks",
+  "webDir": "public",
+  "bundledWebRuntime": false
 }

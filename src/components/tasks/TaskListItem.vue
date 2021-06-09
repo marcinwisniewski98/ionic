@@ -6,6 +6,9 @@
         <ion-label>
             {{ task.title }}
         </ion-label>
+        <ion-label>
+            {{ task.deadline }}
+        </ion-label>
     </ion-item>
 </template>
 
