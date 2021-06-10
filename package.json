@@ -10,20 +10,24 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@capacitor/android": "^3.0.1",
+    "@capacitor/android": "3.0.1",
     "@capacitor/app": "1.0.0",
-    "@capacitor/core": "3.0.0",
+    "@capacitor/core": "^3.0.0",
+    "@capacitor/filesystem": "^1.0.1",
     "@capacitor/haptics": "1.0.0",
     "@capacitor/keyboard": "1.0.0",
+    "@capacitor/storage": "^1.0.1",
     "@ionic/vue": "^5.4.0",
     "@ionic/vue-router": "^5.4.0",
+    "cordova-res": "^0.15.3",
     "core-js": "^3.6.5",
+    "native-run": "^1.4.0",
     "vue": "^3.0.0-0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.1"
   },
   "devDependencies": {
-    "@capacitor/cli": "3.0.0",
+    "@capacitor/cli": "^3.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",

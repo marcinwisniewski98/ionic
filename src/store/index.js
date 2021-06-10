@@ -40,8 +40,6 @@ const store = createStore({
         updateTask(state, taskData){
             var prevTaskData = this.getters.task(taskData.id)
             var index = state.tasks.indexOf(prevTaskData);
-            alert('zmieniam index'+index);
-            alert('zmieniam dane na '+ taskData.id+"   "+taskData.title+"   "+taskData.deadline+"   "+taskData.description);
             state.tasks[index] = taskData;
         },
         removeTask(state, taskData) {
