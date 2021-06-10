@@ -43,7 +43,6 @@ export default {
             const taskData = {  
                 title: this.enteredTitle,
                 deadline: this.enteredDeadline,
-                imageUrl: this.enteredImageUrl,
                 description: this.enteredDescription
             };
             this.$emit('save-task', taskData);
