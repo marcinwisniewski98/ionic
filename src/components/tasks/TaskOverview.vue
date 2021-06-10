@@ -14,8 +14,8 @@
                 <ion-textarea rows="5" required v-model="enteredDescription"/>
             </ion-item>
         </ion-list>
-        <ion-button type="submit" expand="full">Update</ion-button>
-        <ion-button expand="full" @click="deleteTask">Delete</ion-button>
+        <ion-button type="submit">Update</ion-button>
+        <ion-button  @click="removeTask" color="danger">Delete</ion-button>
         </form>
 </template>
 
@@ -44,8 +44,12 @@ export default {
         updateTask(){
             alert('task update');
         },
-        deleteTask(){
-            alert('usuwam task '+this.task.title);
+        removeTask(){
+            const res = window.confirm(`Do you really want do delete ${this.task.title}?`);
+            if(res){
+                this.$store.dispatch('removeTask', this.task);
+                this.$router.replace('/tasks')
+            }
         }
     }
 }

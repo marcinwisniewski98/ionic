@@ -36,11 +36,19 @@ const store = createStore({
             };
 
             state.tasks.unshift(newTask);
+        },
+        removeTask(state, task) {
+            state.tasks = state.tasks.filter(function(value){
+                return value != task;
+            });
         }
     },
     actions: {
         addTask(context, taskData) {
             context.commit('addTask', taskData);
+        },
+        removeTask(context, task){
+            context.commit('removeTask', task);
         }
     },
     getters: {
