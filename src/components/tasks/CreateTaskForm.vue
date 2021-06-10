@@ -6,10 +6,6 @@
                 <ion-input type="text" required v-model="enteredTitle"/>
             </ion-item>
             <ion-item>
-                <ion-label position="floating">Image URL</ion-label>
-                <ion-input type="url" required v-model="enteredImageUrl"/>
-            </ion-item>
-            <ion-item>
                 <ion-label position="floating">Deadline</ion-label>
                 <ion-input type="datetime-local" required v-model="enteredDeadline"/>
             </ion-item>

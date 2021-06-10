@@ -10,7 +10,7 @@ import TaskOverview from '../components/tasks/TaskOverview.vue'
 
 export default {
     components: {
-        TaskOverview
+        TaskOverview,
     },
     data() {
         return {
