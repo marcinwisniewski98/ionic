@@ -2,9 +2,10 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import TasksPage from '../pages/TasksPage.vue'
 
 const routes = [
+
   {
     path: '/',
-    redirect: '/tasks'
+    redirect: '/startPage',
   },
   {
     path: '/tasks',
@@ -17,7 +18,11 @@ const routes = [
   {
     path: '/tasks/add',
     component: () => import('../pages/AddTaskPage.vue')
-  }
+  },
+  {
+    path: '/startPage',
+    component: () => import('../pages/StartPage.vue')
+  },
 ]
 
 const router = createRouter({
