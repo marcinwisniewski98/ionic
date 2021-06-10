@@ -1,7 +1,7 @@
-<template>
+<template >
     <form class="ion-padding" @submit.prevent="submitForm">
-        <ion-list>
-            <ion-item>
+        <ion-list >
+            <ion-item >
                 <ion-label position="floating">Title</ion-label>
                 <ion-input type="text" required v-model="enteredTitle"/>
             </ion-item>
@@ -11,10 +11,10 @@
             </ion-item>
             <ion-item>
                 <ion-label position="floating">Description</ion-label>
-                <ion-textarea rows="5" required v-model="enteredDescription"/>
+                <ion-textarea auto-grow="true" required v-model="enteredDescription"/>
             </ion-item>
         </ion-list>
-        <ion-button type="submit" expand="full">Save</ion-button>
+        <ion-button type="submit" expand="block">Save</ion-button>
         </form>
 </template>
 

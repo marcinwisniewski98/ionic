@@ -1,10 +1,10 @@
 <template>
-    <ion-item :router-link="`/tasks/${task.id}`">
-        <ion-label>
-            {{ task.title }}
+    <ion-item lines="full" id="itemList" :router-link="`/tasks/${task.id}`">
+        <ion-label id="taskTitle">
+            <b>{{task.title}}</b> 
         </ion-label>
-        <ion-label>
-            {{ task.deadline }}
+        <ion-label id="deadLine" class="ion-text-wrap">
+            {{task.deadline}}
         </ion-label>
     </ion-item>
 </template>

@@ -11,11 +11,13 @@
             </ion-item>
             <ion-item>
                 <ion-label position="floating">Description</ion-label>
-                <ion-textarea rows="5" required v-model="enteredDescription"/>
+                <ion-textarea auto-grow="true" required v-model="enteredDescription"/>
             </ion-item>
         </ion-list>
+
         <ion-button type="submit">Update</ion-button>
-        <ion-button  @click="removeTask" color="danger">Delete</ion-button>
+        <ion-button id="contrastbtn" @click="removeTask" >Delete</ion-button>
+
         </form>
 </template>
 
