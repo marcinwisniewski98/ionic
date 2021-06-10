@@ -24,6 +24,7 @@ import { IonList, IonItem, IonLabel, IonInput, IonTextarea } from '@ionic/vue';
 
 
 export default {
+    emits: ['update-task', 'remove-task'],
     props: ['task'],
 
     components: {
@@ -35,6 +36,7 @@ export default {
     },
     data() {
         return {
+            id: this.task.id,
             enteredTitle: this.task.title,
             enteredDeadline: this.task.deadline,
             enteredDescription: this.task.description
@@ -42,14 +44,16 @@ export default {
     },
     methods: {
         updateTask(){
-            alert('task update');
+            const taskData = {
+                id: this.task.id,
+                title: this.enteredTitle,
+                deadline: this.enteredDeadline,
+                description: this.enteredDescription
+            };
+            this.$emit('update-task', taskData);
         },
         removeTask(){
-            const res = window.confirm(`Do you really want do delete ${this.task.title}?`);
-            if(res){
-                this.$store.dispatch('removeTask', this.task);
-                this.$router.replace('/tasks')
-            }
+            this.$emit('remove-task', this.task);
         }
     }
 }

@@ -37,18 +37,27 @@ const store = createStore({
 
             state.tasks.unshift(newTask);
         },
-        removeTask(state, task) {
-            state.tasks = state.tasks.filter(function(value){
-                return value != task;
-            });
+        updateTask(state, taskData){
+            var prevTaskData = this.getters.task(taskData.id)
+            var index = state.tasks.indexOf(prevTaskData);
+            alert('zmieniam index'+index);
+            alert('zmieniam dane na '+ taskData.id+"   "+taskData.title+"   "+taskData.deadline+"   "+taskData.description);
+            state.tasks[index] = taskData;
+        },
+        removeTask(state, taskData) {
+            var index = state.tasks.indexOf(taskData);
+            state.tasks.splice(index, 1);
         }
     },
     actions: {
         addTask(context, taskData) {
             context.commit('addTask', taskData);
         },
-        removeTask(context, task){
-            context.commit('removeTask', task);
+        updateTask(context, taskData) {
+            context.commit('updateTask', taskData)
+        },
+        removeTask(context, taskData){
+            context.commit('removeTask', taskData);
         }
     },
     getters: {
